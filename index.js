@@ -20,7 +20,6 @@ console.log(`${email} attempting to authenticate with ${deviceId}`);
 const neurosity = new Neurosity({
   deviceId
 });
-
 const main = async () => {
   await neurosity.login({
     email,
@@ -33,9 +32,7 @@ const main = async () => {
   console.log("Logged in");
 
   neurosity.calm().subscribe((calm) => {
-    if (calm.probability > 0.3) {
-      console.log("Hello world");
-    }
+    console.log("Hello World!");
   });
 }
 
