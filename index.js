@@ -32,8 +32,13 @@ const main = async () => {
   console.log("Logged in");
 
   neurosity.calm().subscribe((calm) => {
-    console.log("Hello World!");
+    console.log("I'm calm!");
   });
+
+  neurosity.kinesis("leftHandPinch").subscribe((intent) => {
+    console.log("I'm kenisis!");
+  });
+  console.log("Finished Main")
 }
 
 main();
